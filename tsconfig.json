@@ -13,8 +13,8 @@
     "moduleResolution": "bundler",
     "jsx": "preserve",
     "incremental": true,
-    "allowJs": true,
     "skipLibCheck": true,
+    "allowJs": true,
     "resolveJsonModule": true,
     "isolatedModules": true
   },
