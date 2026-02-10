@@ -31,7 +31,7 @@ const MAX_POINTS = 180;
 function colorFor(deviceId: string): string {
   let hash = 0;
   for (let i = 0; i < deviceId.length; i++) {
-    hash = (hash * 31 + deviceId.charCodeAt(i) *32 ) >>> 0;
+    hash = (hash * 31 + deviceId.charCodeAt(i) *52 ) >>> 0;
   }
   const hue = hash % 360;
   return `hsl(${hue}, 70%, 50%)`;
@@ -47,7 +47,7 @@ function fmt(n: unknown, digits = 3) {
 }
 
 const Home: NextPage = () => {
-  const [deviceText, setDeviceText] = useState('pi-001, pi-002');
+  const [deviceText, setDeviceText] = useState('pi-001, pi-sim-001');
   const [paused, setPaused] = useState(false);
   const [status, setStatus] = useState<'disconnected' | 'connecting' | 'connected'>('disconnected');
 
